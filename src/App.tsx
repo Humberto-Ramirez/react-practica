@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/images/logo.svg';
 import './App.css';
+import BlackList from "./modules/blacklist";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <BlackList/>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
