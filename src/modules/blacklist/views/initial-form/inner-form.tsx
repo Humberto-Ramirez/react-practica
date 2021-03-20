@@ -1,15 +1,19 @@
+import { Button, Grid } from '@material-ui/core';
+import AppInput from 'components/app-input';
+import { Field, Form, FormikProps } from 'formik';
 import React from 'react';
-import {Field, Form, FormikProps} from "formik";
-import {Button, Grid} from "@material-ui/core";
-import AppInput from "components/app-input/app-input";
-import InitialFormValues from "./initial-form-values";
+import InitialFormValues from './initial-form-values';
 
-type Props = {}
+type Props = {
+
+}
 
 export default function InnerForm(props: Props & FormikProps<InitialFormValues>) {
-    const {handleChange, values, errors} = props
-    return (
-        <div className="inner-form">
+
+    const { handleChange, values, errors, isSubmitting } = props;
+
+    return(
+        <div className="inner-initial-form">
             <Form noValidate>
                 <Grid container spacing={2} direction="row" alignContent="center" justify="center">
                     <Grid item xs={8} sm={8} md={8}>
@@ -18,10 +22,11 @@ export default function InnerForm(props: Props & FormikProps<InitialFormValues>)
                             id="nombreCompleto"
                             component={AppInput}
                             change={handleChange}
-                            label="Nombre Completo"
+                            label="Nombre completo"
                             value={values.nombreCompleto}
-                            error={errors.curp}
+                            error={!!errors.nombreCompleto}
                         />
+                        {errors.nombreCompleto && `${errors.nombreCompleto} ejemplo`}
                     </Grid>
                     <Grid item xs={8} sm={8} md={8}>
                         <Field
@@ -30,14 +35,15 @@ export default function InnerForm(props: Props & FormikProps<InitialFormValues>)
                             component={AppInput}
                             change={handleChange}
                             label="Curp"
-                            value={values.nombreCompleto}
-                            error={errors.curp}
+                            value={values.curp}
+                            error={!!errors.curp}
                         />
+                        {errors.curp && `${errors.curp} ejemplo`}
                     </Grid>
                 </Grid>
-                <Grid spacing={2} direction="row" alignContent="center" justify="center">
+                <Grid container spacing={2} direction="row" alignContent="center" justify="center">
                     <Grid item xs={8} sm={8} md={8}>
-                        <Button type="submit" variant="contained" color="primary">
+                        <Button type="submit" disabled={isSubmitting} variant="contained" color="primary">
                             Buscar
                         </Button>
                     </Grid>

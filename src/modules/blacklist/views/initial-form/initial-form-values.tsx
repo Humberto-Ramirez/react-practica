@@ -1,6 +1,6 @@
 interface InitialFormValues {
-    nombreCompleto: string
-    curp: string
+    nombreCompleto: string;
+    curp: string;
 }
 
 export default InitialFormValues;
