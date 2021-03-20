@@ -22,6 +22,8 @@ export default function InnerForm(props: Props & FormikProps<InitialFormValues>)
                             value={values.nombreCompleto}
                             error={errors.curp}
                         />
+                    </Grid>
+                    <Grid item xs={8} sm={8} md={8}>
                         <Field
                             type="text"
                             id="curp"
@@ -32,12 +34,12 @@ export default function InnerForm(props: Props & FormikProps<InitialFormValues>)
                             error={errors.curp}
                         />
                     </Grid>
-                    <Grid spacing={2} direction="row" alignContent="center" justify="center">
-                        <Grid item>
-                            <Button type="submit" variant="contained" color="primary">
-                                Buscar
-                            </Button>
-                        </Grid>
+                </Grid>
+                <Grid spacing={2} direction="row" alignContent="center" justify="center">
+                    <Grid item xs={8} sm={8} md={8}>
+                        <Button type="submit" variant="contained" color="primary">
+                            Buscar
+                        </Button>
                     </Grid>
                 </Grid>
             </Form>

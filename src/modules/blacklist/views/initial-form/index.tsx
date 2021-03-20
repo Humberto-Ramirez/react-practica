@@ -18,6 +18,9 @@ const FormControl = withFormik<Props, InitialFormValues>(
         validateOnChange: true,
         validate: (values: InitialFormValues) => {
             let errors: FormikErrors<InitialFormValues> = {};
+            if(values.nombreCompleto.length<10){
+                errors.nombreCompleto = "Longitud Insuficiente"
+            }
             return errors;
         },
         handleSubmit: (values, actions) => {
