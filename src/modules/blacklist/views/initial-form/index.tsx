@@ -26,7 +26,6 @@ const FormControl = withFormik<Props, InitialFormValues>(
 export default function InitialForm(props: Props) {
     return (
         <div className="initial-form">
-
         </div>
     )
 }
