@@ -33,7 +33,7 @@ export default function InnerForm(props: Props & FormikProps<InitialFormValues>)
                         />
                     </Grid>
                     <Grid spacing={2} direction="row" alignContent="center" justify="center">
-                        <Grid item xs={8} sm={8} md={8}>
+                        <Grid item>
                             <Button type="submit" variant="contained" color="primary">
                                 Buscar
                             </Button>
