@@ -1,5 +1,5 @@
 interface InitialFormValues {
-    nombreCompleto: string;
+    nombre: string;
     curp: string;
 }
 

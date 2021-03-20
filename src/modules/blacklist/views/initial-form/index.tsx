@@ -14,7 +14,7 @@ const FormControl = withFormik<Props, InitialFormValues>(
     {
         mapPropsToValues: props => {
             return {
-                nombreCompleto: '',
+                nombre: '',
                 curp: ''
             }
         },
@@ -23,8 +23,8 @@ const FormControl = withFormik<Props, InitialFormValues>(
             let errors: FormikErrors<InitialFormValues> = {};
             console.log('Formulario', values);
             // validaciones
-            if (values.nombreCompleto.length < 10) {
-                errors.nombreCompleto = "Longitud insuficiente";
+            if (values.nombre.length < 2) {
+                errors.nombre = "Longitud insuficiente";
             }
             if (values.curp && !REGEX_CURP.test(values.curp)) {
                 errors.curp = "Formato de Curp inv\u00E1lido";

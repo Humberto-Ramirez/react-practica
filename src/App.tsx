@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
-      <Blacklist/>
+      <Blacklist name="Servicio de consulta de pokemones"/>
     </div>
   );
 }

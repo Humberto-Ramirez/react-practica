@@ -19,16 +19,16 @@ export default function InnerForm(props: Props & FormikProps<InitialFormValues>)
                     <Grid item xs={8} sm={8} md={8}>
                         <Field
                             type="text"
-                            id="nombreCompleto"
+                            id="nombre"
                             component={AppInput}
                             change={handleChange}
                             label="Nombre completo"
-                            value={values.nombreCompleto}
-                            error={!!errors.nombreCompleto}
+                            value={values.nombre}
+                            error={!!errors.nombre}
                         />
-                        {errors.nombreCompleto && `${errors.nombreCompleto} ejemplo`}
+                        {errors.nombre && `${errors.nombre} ejemplo`}
                     </Grid>
-                    <Grid item xs={8} sm={8} md={8}>
+                    {/* <Grid item xs={8} sm={8} md={8}>
                         <Field
                             type="text"
                             id="curp"
@@ -39,7 +39,7 @@ export default function InnerForm(props: Props & FormikProps<InitialFormValues>)
                             error={!!errors.curp}
                         />
                         {errors.curp && `${errors.curp} ejemplo`}
-                    </Grid>
+                    </Grid> */}
                 </Grid>
                 <Grid container spacing={2} direction="row" alignContent="center" justify="center">
                     <Grid item xs={8} sm={8} md={8}>
