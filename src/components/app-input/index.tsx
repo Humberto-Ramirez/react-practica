@@ -1,12 +1,11 @@
+import { createStyles, makeStyles, TextField, Theme } from '@material-ui/core';
 import React from 'react';
-import {createStyles, makeStyles, TextField, Theme} from "@material-ui/core";
-import classes from "*.module.css";
 
 type Props = {
-    id: string,
-    value: string,
-    label: string,
-    error: boolean,
+    id: string;
+    value: string;
+    label: string;
+    error: boolean;
     change: (eventOrPath: string | React.ChangeEvent<any>) => void | ((eventOrTextValue: string | React.ChangeEvent<any>) => void);
 }
 
@@ -24,15 +23,17 @@ const useStyles = makeStyles(
 );
 
 export default function AppInput(props: Props) {
+
     const classes = useStyles();
-    const {id, value, label, error, change} = props
+    const {id, value, label, error, change} = props;
+
     return (
-        <div className="app-input">
+        <div className='app-input'>
             <TextField
                 fullWidth
                 id={id}
-                size='small'
                 variant='outlined'
+                size='small'
                 label={label}
                 onChange={change}
                 error={error}
