@@ -3,8 +3,6 @@ import {Field, Form, FormikProps} from "formik";
 import {Button, Grid} from "@material-ui/core";
 import AppInput from "components/app-input/app-input";
 import InitialFormValues from "./initial-form-values";
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
 
 type Props = {}
 

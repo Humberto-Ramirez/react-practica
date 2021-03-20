@@ -27,8 +27,10 @@ const FormControl = withFormik<Props, InitialFormValues>(
     }
 )(InnerForm);
 export default function InitialForm(props: Props) {
+    const {submitHandler} = props
     return (
         <div className="initial-form">
+            <FormControl submitHandler={submitHandler}/>
         </div>
     )
 }
