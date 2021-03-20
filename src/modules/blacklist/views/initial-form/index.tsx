@@ -10,7 +10,10 @@ type Props = {
 const FormControl = withFormik<Props, InitialFormValues>(
     {
         mapPropsToValues: props => {
-            return {}
+            return {
+                nombreCompleto: '',
+                curp: ''
+            }
         },
         validateOnChange: true,
         validate: (values: InitialFormValues) => {
